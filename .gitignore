@@ -1,0 +1,5 @@
+*.vs
+*.pdf
+Debug/
+Release/
+a6.*
