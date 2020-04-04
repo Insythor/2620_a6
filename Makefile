@@ -1,13 +1,13 @@
 #
-# Makefile for CS 2620 Assignment 5
+# Makefile for CS 2620 Assignment 6
 #
 # Author: Tyler Justinen-Teite
-# Mar. 20, 2020
+# Apr. 4, 2020
 #
 
 PROJECT_DIR = a6
-PROGRAM_USESTACK= useStackProgram
-PROGRAM_USEMAP= useMapProgram
+PROGRAM_USESTACK= useStack
+PROGRAM_USEMAP= useMap
 
 CCC= g++
 CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
@@ -21,7 +21,7 @@ useStackProgram : testCStack.o CStack.o
 
 #Part two of the assignment
 useMapProgram : useMapProgram
-useMapProgram : CMatrixPro.o CMap.o
+useMapProgram : testCMap.o CMap.o
 	$(CCC) $(CCCFLAGS) $^ -o $@	
 
 	# default rule for compiling .cc to .o
