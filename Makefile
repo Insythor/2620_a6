@@ -29,7 +29,7 @@ useMapProgram : CMatrixPro.o CMap.o
 	$(CCC) $(CCCFLAGS) -c $< $@
 
 clean:
-	rm -f *.o *~ *% $(PROGRAM_USESTACK) *# .#*
+	rm -f *.o *~ *% $(PROGRAM_USESTACK) $(PROGRAM_USEMAP) *# .#*
 
 clean-all: clean
-	rm -f $(PROGRAM_USESTACK)
+	rm -f $(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
