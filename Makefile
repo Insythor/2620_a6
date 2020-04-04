@@ -20,13 +20,13 @@ all:	$(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
 %.o: %.cc
 	$(CCC) $(CCCFLAGS) -c $< $@
 
-useStack:	useStackProgram
-useStack: testCSack.o CStack.o
+$(PROGRAM_USESTACK):	$(PROGRAM_USESTACK)
+$(PROGRAM_USESTACK): testCSack.o CStack.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
 
-useMap: useMapProgram
-useMap:	testCMap.o CMap.o
+$(PROGRAM_USEMAP): $(PROGRAM_USEMAP)
+$(PROGRAM_USEMAP):	testCMap.o CMap.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 clean:
 	rm -f *.o *~ *% $(PROGRAM_USESTACK) *# .#*
