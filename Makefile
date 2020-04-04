@@ -16,6 +16,10 @@ CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
 all : $(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
 	$(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
 
+# default rule for compiling .cc to .o
+%.o: %.cc
+	$(CCC) $(CCCFLAGS) -c $< $@
+
 useStack : useStack
 useStack : testCStack.o CStack.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
@@ -25,9 +29,7 @@ useMap : useMap
 useMap : testCMap.o CMap.o
 	$(CCC) $(CCCFLAGS) $^ -o $@	
 
-	# default rule for compiling .cc to .o
-%.o: %.cc
-	$(CCC) $(CCCFLAGS) -c $< $@
+
 
 clean:
 	rm -f *.o *~ *% $(PROGRAM_USESTACK) $(PROGRAM_USEMAP) *# .#*
