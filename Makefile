@@ -6,7 +6,7 @@
 #
 
 PROJECT_DIR = a6
-PROGRAM_USESTACK=	useStackProgram
+PROGRAM_USESTACK= useStackProgram
 PROGRAM_USEMAP= useMapProgram
 
 CCC= g++
