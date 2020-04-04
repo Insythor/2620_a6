@@ -6,8 +6,8 @@
 #
 
 PROJECT_DIR = a6
-PROGRAM_USESTACK= useStack
-PROGRAM_USEMAP= useMap
+PROGRAM_USESTACK= CStack
+PROGRAM_USEMAP= CMap
 
 CCC= g++
 CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
@@ -16,13 +16,13 @@ CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
 all : useStack useMap
 
 #Part one of the assignment
-useStack : useStack
-useStack : testCStack.o
+CStack : CStack
+CStack : testCStack.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
 #Part two of the assignment
-useMap : useMap
-useMap : testCMap.o
+CMap : CMap
+CMap : testCMap.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
 # default rule for compiling .cc to .o
@@ -33,4 +33,4 @@ clean:
 	rm -f *.o *~ *% $(PROGRAM_USESTACK) $(PROGRAM_USEMAP) *# .#*
 
 clean-all: clean
-	rm -f $(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
+	rm -f CStack CMap
