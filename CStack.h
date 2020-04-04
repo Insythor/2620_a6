@@ -41,6 +41,7 @@ private:
 	int stackSize;
 
 };
+#include "./CStack.cc"
 #endif // !CSTACK_H
 
 #include <iostream>
