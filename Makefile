@@ -12,12 +12,10 @@ CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
 all : testCStack testCMap
 
 #Part one of the assignment
-testCStack : testCStack
 testCStack : testCStack.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
 #Part two of the assignment
-testCMap : testCMap
 testCMap : testCMap.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
