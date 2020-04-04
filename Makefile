@@ -6,23 +6,23 @@
 #
 
 PROJECT_DIR=	a6
-PROGRAM_USESTACK=	CStack
-PROGRAM_USEMAP=		CMap
+PROGRAM_USESTACK=	testCStack
+PROGRAM_USEMAP=		testCMap
 
 CCC= g++
 CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
 
 .PHONY: all
-all : CStack CMap
+all : testCStack testCMap
 
 #Part one of the assignment
-CStack : CStack
-CStack : testCStack.o CStack.o
+testCStack : testCStack
+testCStack : testCStack.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
 #Part two of the assignment
-CMap : CMap
-CMap : testCMap.o
+testCMap : testCMap
+testCMap : testCMap.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
 # default rule for compiling .cc to .o
