@@ -19,12 +19,12 @@ all : $(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
 %.o: %.cc
 	$(CCC) $(CCCFLAGS) -c $< $@
 
-$(PROGRAM_USESTACK): $(PROJECT_DIR)
-	testCMap.o CMap.o $(CCC) $(CCCFLAGS) $^ -o $@	
+$(PROGRAM_USESTACK): $(PROJECT_DIR)/testCMap.o
+	CMap.o $(CCC) $(CCCFLAGS) $^ -o $@	
 
 
-$(PROGRAM_USEMAP): $(PROJECT_DIR)
-	testCStack.o CStack.o $(CCC) $(CCCFLAGS) $^ -o $@
+$(PROGRAM_USEMAP): $(PROJECT_DIR)/testCMap.o
+	 CMap.o $(CCC) $(CCCFLAGS) $^ -o $@
 
 # Part One
 useStack : $(PROGRAM_USESTACK)
