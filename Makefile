@@ -17,7 +17,7 @@ all :	$(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
 
 #Part one of the assignment
 $(PROGRAM_USESTACK) : $(PROGRAM_USESTACK)
-	$(CCC) $(CCCFLAGS) -o
+	$(CCC) $(CCCFLAGS) -o $(PROGRAM_USESTACK).cc
 
 testCStack : $(PROGRAM_USESTACK)
 
