@@ -16,7 +16,7 @@ class NODE
 	D data;
 public:
 	NODE(NODE<K, D>* p, K tK, D tD) : prev(p), key(tK), data(tD), nGreater(nullptr), nLess(nullptr) {};
-	virtual ~NODE();
+	virtual ~NODE() { if (nGreater) delete nGreater; if (nLess) delete nLess; };
 	// Parent of current node
 	NODE<K, D>* prev;
 	// Down to the right
@@ -44,6 +44,7 @@ private:
 	void insert(NODE<K, D> toInesrt);
 
 };
+#include "./CMap.cc"
 #endif // !CMAP_H
 
 template<class K, class D>
