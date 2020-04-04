@@ -19,17 +19,16 @@ all : $(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
 %.o: %.cc
 	$(CCC) $(CCCFLAGS) -c $< $@
 
-$(PROGRAM_USESTACK): testCMap.o
-	CMap.o $(CCC) $(CCCFLAGS) $^ -o $@	
+#Part one of the assignment
+useStack : useStack
+useStack : testCStack.o CStack.o
+	$(CCC) $(CCCFLAGS) $^ -o $@
 
+#Part two of the assignment
+useMap : useMap
+useMap : testMap.o CMap.o
+	$(CCC) $(CCCFLAGS) $^ -o $@
 
-$(PROGRAM_USEMAP): testCMap.o
-	 CMap.o $(CCC) $(CCCFLAGS) $^ -o $@
-
-# Part One
-useStack:	$(PROGRAM_USESTACK)
-# Part Two 
-useMap:		$(PROGRAM_USEMAP)
 
 
 clean:
