@@ -14,23 +14,20 @@ CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
 
 .PHONY: all
 all:	$(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
+	$(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
 
 # default rule for compiling .cc to .o
 %.o: %.cc
 	$(CCC) $(CCCFLAGS) -c $< $@
 
-#Part one of the assignment
-$(PROGRAM_USESTACK) : $(PROGRAM_USESTACK)
-	$(CCC) $(CCCFLAGS) -o $(PROGRAM_USESTACK) *.cc
+useStack:	useStack
+useStack: testCSack.o CStack.o
+	$(CCC) $(CCCFLAGS) $^ -o $@
 
-#Part one of the assignment
-$(PROGRAM_USEMAP) : $(PROGRAM_USESTAPROGRAM_USEMAPCK)
-	$(CCC) $(CCCFLAGS) -o $(PROGRAM_USEMAP) *.cc
 
-useStack:	$(PROGRAM_USESTACK)
-
-useMap:		$(PROGRAM_USEMAP)
-
+useMap: useMapProgram
+useMap:	testCMap.o CMap.o
+	$(CCC) $(CCCFLAGS) $^ -o $@
 clean:
 	rm -f *.o *~ *% $(PROGRAM_USESTACK) *# .#*
 
