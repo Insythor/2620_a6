@@ -17,7 +17,7 @@ all : CStack CMap
 
 #Part one of the assignment
 CStack : CStack
-CStack : testCStack.o
+CStack : testCStack.o CStack.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
 #Part two of the assignment
