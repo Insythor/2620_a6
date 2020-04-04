@@ -20,8 +20,8 @@ useStack : testCStack.o CStack.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
 #Part two of the assignment
-useMapProgram : useMapProgram
-useMapProgram : testCMap.o CMap.o
+useMap : useMap
+useMap : testCMap.o CMap.o
 	$(CCC) $(CCCFLAGS) $^ -o $@	
 
 	# default rule for compiling .cc to .o
