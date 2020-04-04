@@ -13,7 +13,8 @@ CCC= g++
 CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
 
 .PHONY: all
-all : testCStack testCMap
+all : $(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
+	$(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
 
 #Part one of the assignment
 testCStack : testCStack
