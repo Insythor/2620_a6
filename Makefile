@@ -27,4 +27,4 @@ clean:
 	rm -f *.o *~ *% *# .#*
 
 clean-all: clean
-	rm -f CStack CMap
+	rm -f testCStack testCMap
