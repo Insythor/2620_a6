@@ -15,8 +15,8 @@ CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
 .PHONY: all
 all:	$(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
 
-useStackProgram : useStackProgram
-useStackProgram : testCStack.o CStack.o
+useStack : useStack
+useStack : testCStack.o CStack.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
 #Part two of the assignment
