@@ -13,9 +13,7 @@ CCC= g++
 CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
 
 .PHONY: all
-all : $(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
-
-
+all : useStack useMap
 
 #Part one of the assignment
 useStack : useStack
@@ -24,7 +22,7 @@ useStack : testCStack.o CStack.o
 
 #Part two of the assignment
 useMap : useMap
-useMap : testMap.o CMap.o
+useMap : testCMap.o CMap.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
 # default rule for compiling .cc to .o
