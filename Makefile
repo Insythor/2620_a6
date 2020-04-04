@@ -5,7 +5,7 @@
 # Mar. 20, 2020
 #
 
-PROJECT_DIR = a5
+PROJECT_DIR = a6
 PROGRAM_USESTACK=	useStackProgram
 PROGRAM_USEMAP= useMapProgram
 
