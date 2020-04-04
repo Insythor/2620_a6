@@ -5,15 +5,15 @@
 # Apr. 4, 2020
 #
 
-PROJECT_DIR = a6
-PROGRAM_USESTACK= CStack
-PROGRAM_USEMAP= CMap
+PROJECT_DIR=	a6
+PROGRAM_USESTACK=	CStack
+PROGRAM_USEMAP=		CMap
 
 CCC= g++
 CCCFLAGS = -Wall -std=c++11 -lpthread -lX11
 
 .PHONY: all
-all : useStack useMap
+all : CStack CMap
 
 #Part one of the assignment
 CStack : CStack
