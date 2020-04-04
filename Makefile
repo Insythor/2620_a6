@@ -20,7 +20,7 @@ all : $(PROGRAM_USESTACK) $(PROGRAM_USEMAP)
 %.o: %.cc
 	$(CCC) $(CCCFLAGS) -c $< $@
 
-useStack : useStack
+useStack : $(PROGRAM_USESTACK)
 useStack : testCStack.o CStack.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
