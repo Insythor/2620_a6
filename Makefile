@@ -17,12 +17,12 @@ all : useStack useMap
 
 #Part one of the assignment
 useStack : useStack
-useStack : testCStack.o CStack.o
+useStack : testCStack.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
 #Part two of the assignment
 useMap : useMap
-useMap : testCMap.o CMap.o
+useMap : testCMap.o
 	$(CCC) $(CCCFLAGS) $^ -o $@
 
 # default rule for compiling .cc to .o
