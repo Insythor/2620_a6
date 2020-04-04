@@ -21,7 +21,7 @@ testCMap : testCMap.o
 
 # default rule for compiling .cc to .o
 %.o: %.cc
-	$(CCC) $(CCCFLAGS) -c $< $@
+	$(CCC) $(CCCFLAGS) -c $<
 
 clean:
 	rm -f *.o *~ *% *# .#*
